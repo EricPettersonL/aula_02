@@ -1,3 +1,7 @@
+# Import Library
+import statistics
+import math
+
 # Exercícios
 
 # Inteiros (int)
@@ -34,17 +38,40 @@ numero8 = int(input("Digite um número inteiro: "))
 quadrado_de_um_numero = numero8 ** 2
 print(f"O quadrado do {numero8} é: {quadrado_de_um_numero}")
 
-# Números de Ponto Flutuante (float)
+#Números de Ponto Flutuante (float)
 
 # 6.Escreva um programa que receba dois números flutuantes e realize sua adição.
 
+numero9 = float(input("Digite um número: "))
+numero10 = float(input("Digite outro número: "))
+soma_float = numero10 + numero9
+print(f"A soma do {numero9} e o {numero10} é = {soma_float}") 
+
 # 7.Crie um programa que calcule a média de dois números flutuantes fornecidos pelo usuário.
+
+numero11 = float(input("Digite um número: "))
+numero12 = float(input("Digite outro número: "))
+media = statistics.median([numero11, numero12])
+print(f"A media do {numero11} e do {numero12} é: {media}")
 
 # 8.Desenvolva um programa que calcule a potência de um número (base e expoente fornecidos pelo usuário).
 
+numero_13 = float(input("Digite um número pra ser a base: "))
+numero_14 = float(input("Digite um número pra ser o expoente: "))
+potencia = numero_13 ** numero_14
+print(f"O número {numero_13} elevado ao expoente {numero_14} é: {potencia}")
+
 # 9.Faça um programa que converta a temperatura de Celsius para Fahrenheit.
 
+temperatura_celsius = float(input("Digite a temperatura em graus celsius: "))
+temperatura_fahrenheit = (1.8 * temperatura_celsius) + 32
+print(f"A temperatura de {temperatura_celsius}° celsius é {temperatura_fahrenheit}° em Fahrenheit")
+
 # 10.Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
+
+raio = float(input("Digite o raio da sua circunferencia: "))
+area_circulo = (math.pi * (raio**2))
+print(f"A área da sua circunferencia é: {area_circulo}")
 
 # Strings (str)
 
