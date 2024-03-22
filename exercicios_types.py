@@ -20,19 +20,19 @@
 # Utilize try-except para garantir que a entrada seja uma string. 
 # Dica: Utilize a função isinstance() para verificar o tipo da entrada.
 
-palavra = input("Digite uma palavra ou frase: ")
+# palavra = input("Digite uma palavra ou frase: ")
 
-try:
-    if isinstance(palavra, str):
-        formatada = palavra.lower().replace(" ", "").replace(".", "")
-        if formatada == formatada[::-1]:
-            print("A palavra ou frase é um palíndromo.")
-        else:
-            print("A palavra ou frase não é um palíndromo.")
-    else:
-        print("Entrada inválida. Por favor, digite uma string.")
-except ValueError:
-    print("Entrada inválida. Por favor, digite uma string.")
+# try:
+#     if isinstance(palavra, str):
+#         formatada = palavra.lower().replace(" ", "").replace(".", "")
+#         if formatada == formatada[::-1]:
+#             print("A palavra ou frase é um palíndromo.")
+#         else:
+#             print("A palavra ou frase não é um palíndromo.")
+#     else:
+#         print("Entrada inválida. Por favor, digite uma string.")
+# except ValueError:
+#     print("Entrada inválida. Por favor, digite uma string.")
 
 
 # Exercício 23: Calculadora Simples
@@ -40,6 +40,32 @@ except ValueError:
 # Use try-except para lidar com divisões por zero e entradas não numéricas. 
 # Utilize if-elif-else para realizar a operação matemática baseada no operador fornecido. 
 # Imprima o resultado ou uma mensagem de erro apropriada.
+
+numero1 = input("Digite o primeiro número: ")
+numero2 = input("Digite o segundo número: ")
+operador = input("Digite o operador (+, -, *, /): ")
+
+try:
+    numero1 = float(numero1)
+    numero2 = float(numero2)
+    if operador == "+":
+        resultado = numero1 + numero2
+    elif operador == "-":
+        resultado = numero1 - numero2
+    elif operador == "*":
+        resultado = numero1 * numero2
+    elif operador == "/":
+        if numero2 == 0:
+            print("Erro: divisão por zero.")
+            exit()
+        else:
+            resultado = numero1 / numero2
+    else:
+        print("Operador inválido.")
+        exit()
+    print(f"O resultado da operação {numero1} {operador} {numero2} = {resultado}")
+except ValueError:
+    print("Entrada inválida. Por favor, digite um número.")
 
 # Exercício 24: Classificador de Números
 # Escreva um programa que solicite ao usuário para digitar um número. 
