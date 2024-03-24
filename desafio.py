@@ -33,19 +33,30 @@ try:
 except ValueError:
     print("O valor do salario deve ser um numero")
     
-    
-print(salario)
 # Solicite ao usuario que digite o valor do bônus recebido
+# Verificar se o valor do salário foi preenchido
+# Verificar se o valor do salário é um número
+# Verificar se o valor do salário é maior que zero
 
-# bonus = float(input("Digite seu bonus: "))
+bonus = input("Digite seu bonus: ")
+
+try:
+    if bonus == "":
+        print("O valor do bonus deve ser preenchido")
+        exit()
+    bonus = float(bonus)
+    if float(bonus) <= 0:
+        print("O valor do bonus deve ser maior que zero")
+        exit()
+except ValueError:
+    print("O valor do bonus deve ser um número")
 
 # Calcule o valor do bônus final
 
-# final_bonus = (salario*bonus)
+final_bonus = (salario*bonus)
 
 # Imprima o cálculo do KPI para o usuário
 # Imprima a mensagem personalizada incluindo o nome do usuário, e o valor do bônus
-# kpi_2 = (bonus_2024 + final_bonus)
-# kpi = str(bonus_2024 + final_bonus)
-# print( "Olá "+ nome +" seu KPI do bônus de 2024 é de " + kpi + " Reais")
-# print(f"Oi {nome} seu bônus ficou em {kpi_2} reais")
+
+kpi_2 = (bonus_2024 + final_bonus)
+print(f"Oi {nome} seu bônus final ficou em {kpi_2:.2f} reais")
